@@ -1,0 +1,98 @@
+algoritmo "variacao_cesta_basica"
+// Atividade 01 - analise de variacao de precos da cesta basica
+var
+   nome1, situacao1: caractere
+   precoAnterior1, precoAtual1, variacao1: real
+   nome2, situacao2: caractere
+   precoAnterior2, precoAtual2, variacao2: real
+   nome3, situacao3: caractere
+   precoAnterior3, precoAtual3, variacao3: real
+
+inicio
+   // ---- Produto 1: entrada de dados ----
+   escreva("Digite o nome do produto 1: ")
+   leia(nome1)
+   escreva("Digite o preco do mes anterior: ")
+   leia(precoAnterior1)
+   escreva("Digite o preco do mes atual: ")
+   leia(precoAtual1)
+
+   // Variacao percentual
+   variacao1 <- ((precoAtual1 - precoAnterior1) / precoAnterior1) * 100
+
+   // Classificacao da situacao
+   se variacao1 > 0 entao
+      situacao1 <- "AUMENTO"
+   senao
+      se variacao1 < 0 entao
+         situacao1 <- "QUEDA"
+      senao
+         situacao1 <- "ESTAVEL"
+      fimse
+   fimse
+
+   // ---- Produto 2: entrada de dados ----
+   escreva("Digite o nome do produto 2: ")
+   leia(nome2)
+   escreva("Digite o preco do mes anterior: ")
+   leia(precoAnterior2)
+   escreva("Digite o preco do mes atual: ")
+   leia(precoAtual2)
+
+   // Variacao percentual
+   variacao2 <- ((precoAtual2 - precoAnterior2) / precoAnterior2) * 100
+
+   // Classificacao da situacao
+   se variacao2 > 0 entao
+      situacao2 <- "AUMENTO"
+   senao
+      se variacao2 < 0 entao
+         situacao2 <- "QUEDA"
+      senao
+         situacao2 <- "ESTAVEL"
+      fimse
+   fimse
+
+   // ---- Produto 3: entrada de dados ----
+   escreva("Digite o nome do produto 3: ")
+   leia(nome3)
+   escreva("Digite o preco do mes anterior: ")
+   leia(precoAnterior3)
+   escreva("Digite o preco do mes atual: ")
+   leia(precoAtual3)
+
+   // Variacao percentual
+   variacao3 <- ((precoAtual3 - precoAnterior3) / precoAnterior3) * 100
+
+   // Classificacao da situacao
+   se variacao3 > 0 entao
+      situacao3 <- "AUMENTO"
+   senao
+      se variacao3 < 0 entao
+         situacao3 <- "QUEDA"
+      senao
+         situacao3 <- "ESTAVEL"
+      fimse
+   fimse
+
+   // ---- Exibicao dos resultados ----
+   escreva("=== Resultados da analise de precos ===")
+   escreva("Produto: ", nome1)
+   escreva("Preco anterior: R$ ", precoAnterior1)
+   escreva("Preco atual: R$ ", precoAtual1)
+   escreva("Variacao: ", variacao1, "%")
+   escreva("Situacao: ", situacao1)
+   escreva("---------------------------------------")
+   escreva("Produto: ", nome2)
+   escreva("Preco anterior: R$ ", precoAnterior2)
+   escreva("Preco atual: R$ ", precoAtual2)
+   escreva("Variacao: ", variacao2, "%")
+   escreva("Situacao: ", situacao2)
+   escreva("---------------------------------------")
+   escreva("Produto: ", nome3)
+   escreva("Preco anterior: R$ ", precoAnterior3)
+   escreva("Preco atual: R$ ", precoAtual3)
+   escreva("Variacao: ", variacao3, "%")
+   escreva("Situacao: ", situacao3)
+   escreva("---------------------------------------")
+fimalgoritmo
